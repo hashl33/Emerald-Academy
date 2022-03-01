@@ -14,10 +14,10 @@ Chapter 2 Day 3 Quest
  
  4. Using this picture below, explain...
 
-    What the error message means:
-      The error message means we are getting an optional (denoted by the '?')
-    Why we're getting this error
-      We get this error because we have not unwrapped the dictionary call
-    How to fix it
-      We fix this by adding the un-wrap operator ('!') at the end of line 3
+    What the error message means: \
+      The error message means we are getting an optional (denoted by the '?') \
+    Why we're getting this error: \
+      We get this error because we have not unwrapped the dictionary call \
+    How to fix it: \
+      We fix this by adding the un-wrap operator ('!') at the end of line 3 \
 <img width="1361" alt="wrongcode" src="https://user-images.githubusercontent.com/100004665/156102019-2b365724-07ca-469e-95aa-365d94037368.png">

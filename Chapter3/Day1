@@ -11,3 +11,35 @@
   No. The create function used to make a resource can only be used inside the contract. 
   
 5. What is the type of the resource below?
+
+          pub resource Jacob {
+
+          }
+
+          This is a Jacob type
+
+6. 
+
+pub contract Test {
+
+    // Hint: There's nothing wrong here ;)
+    pub resource Jacob {
+        pub let rocks: Bool
+        init() {
+            self.rocks = true
+        }
+    }
+
+// Incorrect function
+    pub fun createJacob(): Jacob { // there is 1 here
+        let myJacob = Jacob() // there are 2 here
+        return myJacob // there is 1 here
+    }
+}
+
+// Corrected function
+      pub fun createJacob(): @Jacob { // resource types must have the @ symbol in front to say "this is a resource"
+             let myJacob <- Jacob() // remove = and use the move operator:  '<-'
+             return <- myJacob // use move operator '<-'
+         }
+     }

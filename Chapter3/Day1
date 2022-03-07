@@ -39,7 +39,7 @@ pub contract Test {
 
 // Corrected function
       pub fun createJacob(): @Jacob { // resource types must have the @ symbol in front to say "this is a resource"
-             let myJacob <- Jacob() // remove = and use the move operator:  '<-'
+             let myJacob <- create Jacob() // remove = and use the move operator:  '<-' and 'create' keyword
              return <- myJacob // use move operator '<-'
          }
      }

@@ -4,7 +4,7 @@
   Using .link() looks like this: signer.link<&MyContract.MyResource>(/public/MyTestResource, target: /storage/MyTestResource)
 
 # 2. In your own words (no code), explain how we can use resource interfaces to only expose certain things to the /public/ path.
-
+  By implementing a resource interface, only the variables and functions included in the interface will be exposed to the public through capabilities. Anything not included in the implemented interface will not be accessible through the contract (but **WILL BE VISIBLE ON BLOCKCHAIN**)
 
 # 3. Deploy a contract that contains a resource that implements a resource interface. 
 

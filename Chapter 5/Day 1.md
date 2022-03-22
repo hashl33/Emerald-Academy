@@ -38,4 +38,39 @@ pub contract MyNft {
 
 ### Using the contract in step 2), add some pre conditions and post conditions to your contract to get used to writing them out.
 
+```javascript
+pub contract MyNft {
+    // Define event
+    pub event nftNamed(name: String)
+
+    pub resource NFT{
+
+        pub let id: UInt64
+        access(contract) var name: String
+        access(contract) let metadata: String
+        
+        init(_name:String){
+        self.id = self.uuid
+        self.name = ""
+        self.metadata = ""
+        }
+
+        pub fun setName(name: String): String{
+            // pre condition checks string length
+            pre {
+                name.length > 3: "Name must be longer than 3 characters"
+            }
+            // post condition verifies new name does not equal previous name
+            post {
+                result != before(self.name): "This is already the name!"
+            }
+            self.name = name
+            //Invoke event and broadcast to the outside world
+            emit nftNamed(name: name)
+            return self.name
+        }
+    }
+}
+```
+
 ### For each of the functions below (numberOne, numberTwo, numberThree), follow the instructions.

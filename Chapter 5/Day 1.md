@@ -74,3 +74,9 @@ pub contract MyNft {
 ```
 
 ### For each of the functions below (numberOne, numberTwo, numberThree), follow the instructions.
+numberOne: Yes, this function will log "Jacob"
+
+numberTwo: Yes the pre condition is met: length is >= 0 and the post is met: result (comes from return value) is original name "Jacob" + " Tucker".
+
+numberThree: The function will not log the number, the post condition requires the before value to equal the returned value + 1, which will never be the case.
+              The value of self.number will remain 0

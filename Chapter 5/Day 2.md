@@ -30,7 +30,7 @@ pub contract interface ITest {
     pub var favouriteActivity: String
   }
   // 1) This resource should implement IStuff (Or what is the point of the resource interface?)
-  pub resource Stuff {
+  pub resource Stuff: IStuff {
     pub var favouriteActivity: String
   }
 }
@@ -38,8 +38,7 @@ pub contract interface ITest {
 Contract:
 ```javascript
 // 2) contract should implement ITest
-// pub contract Test: ITest {
-pub contract Test {
+pub contract Test: ITest {
   pub var number: Int
   
   pub fun updateNumber(newNumber: Int) {
@@ -47,13 +46,12 @@ pub contract Test {
   }
   
  // 3) Resource interface exists in contract interface and is redundant here
-  pub resource interface IStuff {
-    pub var favouriteActivity: String
-  }
+ //  pub resource interface IStuff {
+ //   pub var favouriteActivity: String
+ //  } 
   
 // 4) Must implement ITest.IStuff specifically
-// pub resources Stuff: ITest.IStuff
-  pub resource Stuff: IStuff {
+  pub resources Stuff: ITest.IStuff {
     pub var favouriteActivity: String
 
     init() {

@@ -1,4 +1,4 @@
-Explain why standards can be beneficial to the Flow ecosystem.
+## Explain why standards can be beneficial to the Flow ecosystem.
  Standards are neccessary to add compatibility to contracts. In order to grow the Flow eco-system, those building future tools need to expect certain events, resources etc., and if there is no standard in place, there will be a lot more work for future builders, which may 
  mean the work just doesn't get done. For example, if find.xyz had to examine each nft contract and there were no standards in place, I doubt the fine devs at .find 
  would be able to add new projects so quickly. This also goes for tooling such as the Emerald Bot, Schwwap.IO, marketplaces, wallets etc.
@@ -8,10 +8,10 @@ Explain why standards can be beneficial to the Flow ecosystem.
  Personal Thoughts: I wonder where the standards begin to feel restrictive to those building tooling. How often are the standards updated? Will standards continue to be enforced in the future for contracts to deploy on the Flow blockchain? 
 
 
-What is YOUR favourite food?
+## What is YOUR favourite food?
   Shabu-Shabu しゃぶしゃぶ
 
-Please fix this code (Hint: There are two things wrong):
+## Please fix this code (Hint: There are two things wrong):
 Contract Interface:
 ```javascript
 pub contract interface ITest {
